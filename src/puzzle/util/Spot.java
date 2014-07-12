@@ -1,13 +1,13 @@
-package puzzle;
+package puzzle.util;
 
 public class Spot {
 
-    private int x;
-    private int y;
+    public final int x;
+    public final int y;
 
-    public Spot() {}
     public Spot(int x, int y) {
         this.x = x;
         this.y = y;
     }
+
 }
