@@ -17,6 +17,7 @@ public class PuzzleSolver {
         int end = 36;
 
         findSolutions(packName, start, end);
+    }
       
     public static void findSolutions(String packName, int start, int end) throws FileNotFoundException {
 
