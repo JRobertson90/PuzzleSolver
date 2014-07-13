@@ -1,0 +1,12 @@
+-------------------------
+  morning-35-answer.txt
+-------------------------
+1. Move Ice Block at (row = 1, col = 4) down.
+2. Move Ice Block at (row = 4, col = 1) right.
+3. Move Fire Block at (row = 4, col = 4) up.
+4. Move Diamond Block at (row = 3, col = 5) left.
+5. Move Ice Block at (row = 5, col = 2) up.
+6. Move Ice Block at (row = 5, col = 3) up.
+7. Move Fire Block at (row = 1, col = 3) down.
+8. Move Ice Block at (row = 2, col = 2) right.
+9. Move Diamond Block at (row = 3, col = 1) right.

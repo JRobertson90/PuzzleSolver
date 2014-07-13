@@ -13,8 +13,14 @@ public class PuzzleSolver {
     public static void main(String[] args) throws FileNotFoundException {
 
         String packName = "morning";
+        int start = 1;
+        int end = 36;
 
-        for(int lvl = 1; lvl <= 36; lvl++) {
+        findSolutions(packName, start, end);
+      
+    public static void findSolutions(String packName, int start, int end) throws FileNotFoundException {
+
+        for(int lvl = start; lvl <= end; lvl++) {
 
             File puzzleFile = new File("./puzzles/" + packName + "/" + packName + "-" + lvl + ".txt");
             File answerFile = new File("./puzzles/" + packName + "/answers/" + packName + "-" + lvl + "-answer.txt");

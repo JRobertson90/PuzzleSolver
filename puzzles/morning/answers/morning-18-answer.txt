@@ -1,0 +1,7 @@
+-------------------------
+  morning-18-answer.txt
+-------------------------
+1. Move Ice Block at (row = 5, col = 3) up.
+2. Move Ice Block at (row = 2, col = 4) left.
+3. Move Ice Block at (row = 5, col = 2) up.
+4. Move Ice Block at (row = 1, col = 4) left.
