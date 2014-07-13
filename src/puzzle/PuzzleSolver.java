@@ -19,8 +19,7 @@ public class PuzzleSolver {
             File puzzleFile = new File("./puzzles/" + packName + "/" + packName + "-" + lvl + ".txt");
             File answerFile = new File("./puzzles/" + packName + "/answers/" + packName + "-" + lvl + "-answer.txt");
 
-            puzzleFile.mkdirs();
-            answerFile.mkdirs();
+            answerFile.getParentFile().mkdirs();
 
             Board board = Importer.importPuzzle(puzzleFile);
             Solver solver = new Solver(board,answerFile);
