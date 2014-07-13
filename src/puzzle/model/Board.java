@@ -1,9 +1,7 @@
-package puzzle;
+package puzzle.model;
 
 import puzzle.block.Block;
 import puzzle.space.Space;
-import puzzle.util.Direction;
-import puzzle.util.Spot;
 
 import java.util.ArrayList;
 import java.util.List;

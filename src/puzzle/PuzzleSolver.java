@@ -1,43 +1,41 @@
 package puzzle;
 
-import puzzle.block.Block;
-import puzzle.util.Direction;
-import puzzle.util.Importer;
+import puzzle.importer.Importer;
+import puzzle.model.Board;
+import puzzle.solver.Solver;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.Scanner;
+import java.io.PrintWriter;
 
 public class PuzzleSolver {
 
     public static void main(String[] args) throws FileNotFoundException {
 
-        // TODO: Fix stack overflow bug where ice gets in an infinite loop
+        String packName = "morning";
 
-//        if(args.length < 2) {
-//            System.out.println("Usage: puzzle.txt answer.txt");
-//            return;
-//        }
-//
-//        File puzzleFile = new File(args[0]);
-//        File answerFile = new File(args[1]);
+        for(int lvl = 1; lvl <= 36; lvl++) {
 
-        System.out.println("Enter name of file (without .txt): ");
-        String fileName = new Scanner(System.in).nextLine();
+            File puzzleFile = new File("./puzzles/" + packName + "/" + packName + "-" + lvl + ".txt");
+            File answerFile = new File("./puzzles/" + packName + "/answers/" + packName + "-" + lvl + "-answer.txt");
 
-//        String fileName = "welcome-";
-//        for(int lvl = 1; lvl <= 24; lvl++) {
-//
-//            File puzzleFile = new File("./puzzles/welcome/" + fileName + lvl + ".txt");
-//            File answerFile = new File("./puzzles/welcome/answers/" + fileName + lvl + "-answer.txt");
-
-            File puzzleFile = new File("./puzzles/" + fileName + ".txt");
-            File answerFile = new File("./puzzles/" + fileName + "-answer.txt");
+            puzzleFile.mkdirs();
+            answerFile.mkdirs();
 
             Board board = Importer.importPuzzle(puzzleFile);
             Solver solver = new Solver(board,answerFile);
-            solver.solve();
-//        }
+
+            try {
+                solver.solve();
+            }
+            catch (StackOverflowError error) {
+                PrintWriter pw = new PrintWriter(answerFile);
+                pw.println("Stack Overflow Error!");
+                pw.println("Most likely caused by a block in an infinite loop!");
+                pw.println("Sorry about that! This will be fixed soon, I promise.");
+                pw.close();
+            }
+        }
     }
 
 }

@@ -1,8 +1,8 @@
 package puzzle.block;
 
 import puzzle.space.Space;
-import puzzle.util.Spot;
-import puzzle.util.State;
+import puzzle.model.Spot;
+import puzzle.model.State;
 
 public class IceBlock extends Block {
 

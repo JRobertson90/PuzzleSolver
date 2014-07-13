@@ -1,8 +1,8 @@
 package puzzle.space;
 
 
-import puzzle.util.Spot;
-import puzzle.util.State;
+import puzzle.model.Spot;
+import puzzle.model.State;
 
 public class BlockSpace extends Space {
 

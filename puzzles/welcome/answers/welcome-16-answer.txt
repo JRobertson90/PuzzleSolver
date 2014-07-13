@@ -1,0 +1,7 @@
+-------------------------
+  welcome-16-answer.txt
+-------------------------
+1. Move Ice Block at (row = 1, col = 5) left.
+2. Move Ice Block at (row = 3, col = 2) right.
+3. Move Ice Block at (row = 2, col = 3) right.
+4. Move Ice Block at (row = 3, col = 6) left.

@@ -1,9 +1,9 @@
 package puzzle.space;
 
 import puzzle.block.Block;
-import puzzle.util.Direction;
-import puzzle.util.Spot;
-import puzzle.util.State;
+import puzzle.model.Direction;
+import puzzle.model.Spot;
+import puzzle.model.State;
 
 public abstract class Space {
 

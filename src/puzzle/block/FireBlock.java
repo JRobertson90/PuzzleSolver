@@ -1,9 +1,9 @@
 package puzzle.block;
 
-import puzzle.Board;
+import puzzle.model.Board;
 import puzzle.space.Space;
-import puzzle.util.Spot;
-import puzzle.util.State;
+import puzzle.model.Spot;
+import puzzle.model.State;
 
 public class FireBlock extends Block {
 

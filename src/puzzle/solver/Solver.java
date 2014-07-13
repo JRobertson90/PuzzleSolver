@@ -1,8 +1,9 @@
-package puzzle;
+package puzzle.solver;
 
 import puzzle.block.Block;
+import puzzle.model.Board;
 import puzzle.space.Space;
-import puzzle.util.Direction;
+import puzzle.model.Direction;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -28,7 +29,7 @@ public class Solver {
 
         if(foundSolution) {
 
-            pw.println("--------------------\n  Found Solution!\n--------------------");
+            pw.println("-------------------------\n  " + answerFile.getName() + "\n-------------------------");
 
             int instructionNumber = 1;
             for(int i = answerInstructions.size() - 1; i >= 0; i--) {
@@ -36,11 +37,12 @@ public class Solver {
                 instructionNumber++;
             }
 
-            pw.close();
         }
         else {
-            System.out.println("Sorry! I couldn't find a solution to this puzzle, my bad.");
+            pw.println("Sorry! I couldn't find a solution to this puzzle, my bad.");
         }
+
+        pw.close();
     }
 
     public boolean iterate(Board board) {

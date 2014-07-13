@@ -1,4 +1,4 @@
-package puzzle.util;
+package puzzle.model;
 
 public class Spot {
 

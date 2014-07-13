@@ -1,11 +1,14 @@
-package puzzle.util;
+package puzzle.importer;
 
-import puzzle.Board;
+import puzzle.model.Board;
 import puzzle.block.Block;
 import puzzle.block.DiamondBlock;
 import puzzle.block.FireBlock;
 import puzzle.block.IceBlock;
 import puzzle.space.*;
+import puzzle.model.Direction;
+import puzzle.model.Spot;
+import puzzle.model.State;
 
 import java.io.File;
 import java.io.FileNotFoundException;
