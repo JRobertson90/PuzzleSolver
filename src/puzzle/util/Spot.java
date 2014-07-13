@@ -52,6 +52,6 @@ public class Spot {
 
     @Override
     public String toString() {
-        return "(" + row + "," + col + ")";
+        return "(row = " + (row + 1) + ", col = " + (col + 1) + ")";
     }
 }

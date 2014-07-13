@@ -27,12 +27,19 @@ public class Solver {
         boolean foundSolution = iterate(board);
 
         if(foundSolution) {
-            for(int i = answerInstructions.size() - 1; i > 0; i--) {
-                pw.println(answerInstructions.get(i));
+
+            pw.println("--------------------\n  Found Solution!\n--------------------");
+
+            int instructionNumber = 1;
+            for(int i = answerInstructions.size() - 1; i >= 0; i--) {
+                pw.println(instructionNumber + ". " + answerInstructions.get(i));
+                instructionNumber++;
             }
+
+            pw.close();
         }
         else {
-            pw.println("Sorry! I couldn't find a solution to this puzzle, my bad.");
+            System.out.println("Sorry! I couldn't find a solution to this puzzle, my bad.");
         }
     }
 
@@ -69,6 +76,7 @@ public class Solver {
                         String instruction = "Move " + b.getName() + " at " +
                                 b.getOrigin().toString() + " " + direction.toString() + ".";
                         answerInstructions.add(instruction);
+                        return true;
                     }
                 }
 

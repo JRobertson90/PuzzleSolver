@@ -30,6 +30,7 @@ public class DiversionSpace extends Space {
     }
 
     public Direction processMovement(Block block, Direction direction) {
+        block.setPlace(spot);
         return this.direction;
     }
 }
