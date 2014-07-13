@@ -1,15 +1,16 @@
 package puzzle.space;
 
+
 import puzzle.util.Spot;
 import puzzle.util.State;
 
-public class BoundarySpace extends Space {
+public class BlockSpace extends Space {
 
-    public BoundarySpace(Spot spot) {
+    public BlockSpace(Spot spot) {
         super(State.BLOCKED, spot);
     }
 
-    public BoundarySpace(State state, Spot spot) {
+    public BlockSpace(State state, Spot spot) {
         super(state,spot);
     }
 
@@ -20,6 +21,6 @@ public class BoundarySpace extends Space {
 
     @Override
     public Space copy() {
-        return new BoundarySpace(state,spot);
+        return new BlockSpace(state,spot);
     }
 }

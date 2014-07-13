@@ -1,5 +1,7 @@
 package puzzle.space;
 
+import puzzle.block.Block;
+import puzzle.util.Direction;
 import puzzle.util.Spot;
 import puzzle.util.State;
 
@@ -12,6 +14,10 @@ public abstract class Space {
         this.state = state;
         this.spot = spot;
     }
+
+    public abstract boolean isAcceptableWinState();
+
+    public abstract Space copy();
 
     public State getState() {
         return state;
@@ -29,5 +35,19 @@ public abstract class Space {
         this.spot = spot;
     }
 
+    /**
+     * Processes when a block arrives onto this space. Can override to do special ops before and after a block moves here.
+     * @param block The block that is trying to move onto this space.
+     * @param direction The direction the block is headed when it arrived.
+     * @return The new direction, override this if you want to redirect blocks, otherwise return the same direction.
+     */
+    public Direction processMovement(Block block, Direction direction) {
+        block.handleMovement(this);
+        return direction;
+    }
 
+    @Override
+    public String toString() {
+        return spot.toString() + " - " + state;
+    }
 }
