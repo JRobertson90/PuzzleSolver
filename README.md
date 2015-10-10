@@ -4,6 +4,8 @@ This program will solve the puzzles in the **Puzzle Retreat** app!
 
 Created by Jason Robertson - 7/13/2014
 
+By the way, in case you were wondering, I completed all the puzzles myself before writing this code. I mainly just did this for fun. If you want all the solutions to every puzzle in the puzzle retreat app, plus the ones that never got created, or the ones created by users (if there were such a thing) then you've come to the right place!
+
 # Drawing the puzzle
 1. In a simple text file, use the symbols explained below to draw the puzzle.
 2. The board must be a rectangle.
